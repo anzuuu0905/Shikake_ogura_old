@@ -1,0 +1,9 @@
+@use "global"as *;
+
+.news__block {
+    margin-bottom: rem(52);
+
+    @include mq("md") {
+        margin-bottom: rem(98);
+    }
+}

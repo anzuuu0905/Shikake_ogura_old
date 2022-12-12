@@ -1,0 +1,22 @@
+@use "global"as *;
+
+.event__inner {
+    max-width: rem(940);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.event__wrapper {
+    background-color: #f5f5f5;
+    width: 100%;
+    margin: 0 auto;
+    padding: rem(17) 0 rem(24);
+
+    @include mq("md") {
+        padding: rem(8) 0 rem(16);
+    }
+}
+
+.event__items {
+    margin-top: rem(36);
+}

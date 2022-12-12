@@ -1,0 +1,59 @@
+@use "global"as *;
+
+.accordion__title {
+    position: relative;
+}
+
+.accordion__title::before {
+    /* くの字の表示設定 */
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: rem(8);
+    right: rem(25);
+    width: 12px;
+    height: 12px;
+    border-top: 1.5px solid $black;
+    border-right: 1.5px solid $black;
+    transform: rotate(135deg);
+
+    @include mq("md") {
+        top: rem(20);
+        right: rem(40);
+        width: 20px;
+        height: 20px;
+        border-top: 2px solid $black;
+        border-right: 2px solid $black;
+    }
+}
+
+.accordion__title::after {
+    content: "お品書き";
+    display: block;
+    color: $black;
+    font-size: rem(8);
+    position: absolute;
+    top: 50%;
+    right: rem(10);
+
+    @include mq("md") {
+        font-size: rem(14);
+        top: 55%;
+        right: rem(20);
+    }
+}
+
+.accordion__title.close::before {
+    top: rem(15);
+    right: rem(25);
+    transform: rotate(-45deg);
+
+    @include mq("md") {
+        top: rem(30);
+        right: rem(40);
+    }
+}
+
+.accordion__box {
+    display: none;
+}

@@ -1,0 +1,298 @@
+@use "global"as *;
+
+.footer-calender__area {
+    margin-top: rem(20);
+}
+
+.xo-event-calendar {
+    position: relative;
+}
+
+.xo-event-calendar table {
+    background-color: #fff;
+    border-collapse: separate;
+    border-spacing: 2px;
+    color: $black;
+    font-weight: $normal;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.xo-months {
+
+    @include mq("sm") {
+        display: flex;
+        gap: rem(10);
+    }
+
+}
+
+.xo-month-wrap {
+    max-width: rem(400);
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.xo-event-calendar table table tr {
+    display: table-row;
+}
+
+.xo-event-calendar table table td,
+.xo-event-calendar table table th {
+    display: table-cell;
+    padding: 0;
+}
+
+.xo-event-calendar table.xo-month {
+    border: 2px solid #f2f2f2;
+    // border-right-width: 0;
+    // margin: 0 0 8px;
+    padding: rem(6) rem(4);
+    position: relative;
+}
+
+.xo-event-calendar table.xo-month td,
+.xo-event-calendar table.xo-month th {
+    // border: 1px solid #ccc;
+    padding: 0;
+}
+
+.xo-event-calendar table.xo-month>caption {
+    caption-side: top;
+    text-align: center;
+}
+
+.xo-event-calendar table.xo-month .month-header {
+    margin: 2px 0 4px;
+}
+
+.xo-event-calendar table.xo-month .month-header>span {
+    display: inline-block;
+    font-size: 120%;
+    line-height: 28px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.xo-event-calendar table.xo-month button {
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    color: $black;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    text-shadow: none;
+    width: 28px;
+}
+
+.xo-event-calendar table.xo-month button[disabled] {
+    cursor: default;
+    opacity: .3;
+}
+
+.xo-event-calendar table.xo-month button>span {
+    font-size: rem(26);
+    height: 20px;
+    line-height: 28px;
+    text-align: center;
+    vertical-align: middle;
+    width: 28px;
+
+    @include mq("md") {
+        font-size: rem(18);
+    }
+}
+
+.xo-event-calendar table.xo-month button span.nav-prev {
+    display: inline-block;
+    font-size: 0;
+    height: 28px;
+    width: 28px;
+}
+
+.xo-event-calendar table.xo-month button span.nav-next {
+    display: inline-block;
+    font-size: 0;
+    height: 28px;
+    width: 28px;
+}
+
+.xo-event-calendar table.xo-month .month-prev {
+    float: left;
+}
+
+.xo-event-calendar table.xo-month .month-next {
+    float: right;
+}
+
+.xo-event-calendar table.xo-month>thead th {
+    border-width: 0 1px 0 0;
+    font-size: rem(18);
+    font-weight: $normal;
+    padding: 1px 0;
+    text-align: center;
+
+    @include mq("md") {
+        font-size: rem(14);
+    }
+}
+
+.xo-event-calendar table.xo-month .month-week {
+    border: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.xo-event-calendar table.xo-month .month-week table {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.xo-event-calendar table.xo-month .month-dayname {
+    border-width: 1px 0 0 1px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.xo-event-calendar table.xo-month .month-dayname td {
+    border-width: 1px 1px 0 0;
+    padding: 0;
+    background-color: #b8dee5;
+}
+
+.xo-event-calendar table.xo-month .month-dayname td div {
+    border-width: 1px 1px 0 0;
+    font-size: rem(18);
+    font-weight: $normal;
+    height: 1000px;
+    line-height: 1;
+    padding: rem(4);
+    text-align: center;
+
+    @include mq("md") {
+        font-size: rem(14);
+        line-height: 1.8;
+    }
+}
+
+.xo-event-calendar table.xo-month .month-dayname td div.other-month {
+    color: #f2f2f2;
+    background-color: #f2f2f2;
+}
+
+.xo-event-calendar table.xo-month .month-dayname td div.today {
+    font-weight: $bold;
+}
+
+.xo-event-calendar table.xo-month .month-dayname-space {
+    height: rem(8);
+    position: relative;
+    top: 0;
+}
+
+.xo-event-calendar table.xo-month .month-event {
+    background-color: transparent;
+    position: relative;
+    top: 0;
+}
+
+.xo-event-calendar table.xo-month .month-event td {
+    border-width: 0 1px 0 0;
+    padding: 0 1px 2px;
+}
+
+.xo-event-calendar table.xo-month .month-event-space {
+    background-color: transparent;
+    height: 1.5em;
+}
+
+.xo-event-calendar table.xo-month .month-event-space td {
+    border-width: 0 1px 0 0;
+}
+
+.xo-event-calendar table.xo-month .month-event tr,
+.xo-event-calendar table.xo-month .month-event-space tr {
+    background-color: transparent;
+}
+
+.xo-event-calendar table.xo-month .month-event-title {
+    background-color: #ccc;
+    border-radius: 3px;
+    color: #666;
+    display: block;
+    font-size: rem(18);
+    overflow: hidden;
+    padding: 0 3px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.xo-event-calendar p.holiday-title {
+    font-size: rem(18);
+    font-weight: $normal;
+    margin: 0;
+    padding: 2px 0;
+    vertical-align: middle;
+    margin-top: rem(10);
+
+    @include mq("md") {
+        font-size: rem(14);
+    }
+}
+
+// .xo-event-calendar p.holiday-title span {
+//     // border: 1px solid #ccc;
+//     margin: 0 6px 0 0;
+//     padding: 0 0 0 18px;
+// }
+
+// .xo-event-calendar .loading-animation {
+//     left: 50%;
+//     margin: -20px 0 0 -20px;
+//     position: absolute;
+//     top: 50%;
+// }
+
+// .xoec-loading .xo-months {
+//     opacity: .5;
+// }
+
+// .xoec-loading .loading-animation {
+//     -webkit-animation: loadingCircRot .8s linear infinite;
+//     animation: loadingCircRot .8s linear infinite;
+//     border: 5px solid rgba(0, 0, 0, .2);
+//     border-radius: 50%;
+//     border-top-color: #4285f4;
+//     height: 40px;
+//     width: 40px;
+// }
+
+// @-webkit-keyframes loadingCircRot {
+//     0% {
+//         -webkit-transform: rotate(0deg)
+//     }
+
+//     to {
+//         -webkit-transform: rotate(359deg)
+//     }
+// }
+
+// @keyframes loadingCircRot {
+//     0% {
+//         transform: rotate(0deg)
+//     }
+
+//     to {
+//         transform: rotate(359deg)
+//     }
+// }

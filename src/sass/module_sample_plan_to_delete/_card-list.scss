@@ -1,0 +1,44 @@
+@use "global"as *;
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: rem(10);
+
+    @include mq("md") {
+        display: flex;
+        flex-direction: initial;
+        gap: rem(14);
+    }
+}
+
+.card-list__item {
+    max-width: rem(500);
+    width: 100%;
+    margin: 0 auto;
+
+    @include mq("md") {
+        max-width: calc(50% - rem(14) / 2);
+        margin: 0;
+    }
+    @include mq("lg") {
+        max-width: calc(25% - rem(14) *3 /4);
+    }
+}
+
+.card-list__item+.card-list__item {
+    margin-top: rem(14);
+
+    @include mq("md") {
+        margin-top: 0;
+    }
+}
+
+.card-list__pc {
+    display: none;
+
+    @include mq("md") {
+        display: flex;
+    }
+}

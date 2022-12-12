@@ -1,0 +1,109 @@
+@use "global"as *;
+
+.menu-group__text {
+    color: $black;
+    font-size: rem(11);
+    font-weight: $normal;
+    line-height: 1;
+    margin-bottom: rem(15);
+
+    @include mq("md") {
+        font-size: rem(14);
+        margin-bottom: rem(20);
+    }
+}
+
+.menu-group__tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(15) rem(7) rem(15) rem(15);
+    cursor: pointer;
+
+    @include mq("md") {
+        padding: rem(30) rem(18) rem(30) rem(30);
+    }
+}
+
+.menu-group__inner {
+    background-color: #fafafa;
+    border: 1px solid #f0f0f0;
+}
+
+.menu-group__title {
+    color: $black;
+    font-size: rem(19);
+    font-weight: 400;
+    font-family: 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", "Hiragino Mincho Pro", HGS明朝E, メイリオ, Meiryo, serif;
+    line-height: 1;
+
+    @include mq("md") {
+        font-size: rem(38);
+    }
+}
+
+.menu-group__title--kagezen {
+    position: relative;
+
+}
+
+.menu-group__title--kagezen::before {
+    content: "かげぜん";
+    display: block;
+    font-size: rem(7);
+    font-weight: $normal;
+    position: absolute;
+    top: rem(-12);
+    left: 0;
+
+    @include mq("md") {
+        content: "かげ ぜん";
+        font-size: rem(16);
+        letter-spacing: 0.05em;
+        top: rem(-18);
+        left: 0;
+    }
+}
+
+.menu-group__title--kagezen::after {
+    content: "※";
+    display: block;
+    font-size: rem(4);
+    font-weight: $normal;
+    position: absolute;
+    top: rem(-15);
+    left: rem(40);
+
+    @include mq("md") {
+        font-size: rem(10);
+        top: rem(-20);
+        left: rem(75);
+    }
+}
+
+.menu-group__price {
+    color: $black;
+    font-size: rem(18);
+    line-height: 1;
+    margin-right: rem(50);
+
+    @include mq("md") {
+        font-size: rem(30);
+        margin-right: rem(80);
+    }
+}
+
+.menu-group__price--small {
+    color: $black;
+    font-size: rem(12);
+    font-weight: $normal;
+    line-height: 1;
+
+    @include mq("md") {
+        font-size: rem(18);
+    }
+}
+
+.menu-group__img {
+    object-fit: cover;
+}

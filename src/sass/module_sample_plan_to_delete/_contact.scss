@@ -1,0 +1,138 @@
+@use "global"as *;
+
+.contact-head__text {
+    color: $black;
+    margin-bottom: rem(90);
+}
+
+.contact-head__description {
+    margin-bottom: rem(3);
+    font-size: rem(18);
+    font-weight: $normal;
+    line-height: 2.15;
+
+    @include mq("md") {
+        font-size: rem(20);
+        text-align: center;
+    }
+}
+
+.contact-head__annotation {
+    font-size: rem(12);
+    font-weight: $normal;
+
+    @include mq("md") {
+        font-size: rem(14);
+        text-align: right;
+    }
+}
+
+.contact__title {
+    position: relative;
+    color: $black;
+    font-size: rem(20);
+    background-color: #f7f7f7;
+    padding: rem(12) rem(25) rem(12);
+    margin-bottom: rem(30);
+
+    @include mq("md") {
+        font-size: rem(24);
+        padding: rem(16) rem(25) rem(17);
+    }
+}
+
+.contact-section__wrap {
+    margin-bottom: rem(90);
+}
+
+.contact__title::before {
+    content: "";
+    display: block;
+    width: rem(7);
+    height: 100%;
+    background-color: #ff7f00;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.note {
+    color: $black;
+    font-size: rem(18);
+    font-weight: $normal;
+    letter-spacing: -0.05em;
+    margin-bottom: rem(8);
+}
+
+.contact__tel {
+    display: block;
+    color: $black;
+    font-size: rem(24);
+    line-height: 1.5;
+    text-align: center;
+    margin-top: rem(10);
+
+    @include mq("md") {
+        text-align: left;
+    }
+}
+
+.contact__tel::before {
+    content: "";
+    background: url(../images/common/tel-icon.png) no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: rem(15);
+    height: rem(24);
+    vertical-align: middle;
+    margin-right: rem(3);
+}
+
+.contact-time__items {
+    margin: rem(15) 0;
+}
+
+.contact-time__item {
+
+    @include mq("md") {
+        display: flex;
+    }
+}
+
+.contact-time__item+.contact-time__item {
+    margin-top: rem(8);
+
+}
+
+.contact-time__title {
+    color: $black;
+    position: relative;
+    font-size: rem(18);
+    padding-left: rem(12);
+    max-width: rem(110);
+    width: 100%;
+}
+
+.contact-time__title::before {
+    content: '';
+    width: rem(8);
+    height: rem(8);
+    position: absolute;
+    left: 0;
+    top: rem(8);
+    border-radius: 50%;
+    background-color: #4d4d4d;
+}
+
+.contact-time__body {
+    color: $black;
+    font-size: rem(18);
+    font-weight: $normal;
+}
+
+.contact-time__description {
+    color: $black;
+    font-size: rem(14);
+    font-weight: $normal;
+}

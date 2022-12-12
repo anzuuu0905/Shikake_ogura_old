@@ -1,0 +1,40 @@
+@use "global"as *;
+
+.blog-connect__links {
+    background-color: #f5f5f5;
+    padding: rem(30) 0;
+    margin-bottom: rem(50);
+
+    @include mq("md") {
+        margin-bottom: rem(90);
+    }
+}
+
+.blog-connect__top {
+    width: 100%;
+    margin: 0 auto rem(50);
+}
+
+.blog-connect__title {
+    color: $orange;
+    font-size: rem(25);
+    line-height: 1;
+    text-align: center;
+
+    @include mq("md") {
+        font-size: rem(34);
+    }
+}
+
+.blog-connect__subtitle {
+    display: inline-block;
+    width: 100%;
+    color: $orange;
+    font-size: rem(14);
+    line-height: 1;
+    text-align: center;
+
+    @include mq("md") {
+        font-size: rem(19);
+    }
+}

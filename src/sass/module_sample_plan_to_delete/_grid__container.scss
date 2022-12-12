@@ -1,0 +1,30 @@
+@use "global"as *;
+
+.grid__container {
+    grid-template-columns: auto;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer";
+
+
+    @include mq("md") {
+        display: grid;
+        grid-template-columns: rem(230) minmax(0, 1fr);
+        grid-template-areas:
+            "header  content"
+            "footer  footer";
+    }
+}
+
+.grid__header {
+    grid-area: header;
+}
+
+.grid__content {
+    grid-area: content;
+}
+
+.grid__footer {
+    grid-area: footer;
+}

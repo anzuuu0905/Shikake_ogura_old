@@ -1,0 +1,199 @@
+@use "global"as *;
+
+.btn-link {
+    position: relative;
+    display: inline-block;
+    color: $orange;
+    font-size: rem(17);
+    line-height: 1;
+    text-align: center;
+    width: 100%;
+    background-color: $white;
+    padding: rem(16) 0 rem(18);
+    border: 1px solid $orange;
+    max-width: rem(400);
+    width: 100%;
+
+    @include mq("md") {
+        max-width: rem(320);
+        width: 100%;
+    }
+}
+
+.btn-link::before {
+    /* くの字の表示設定 */
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid $orange;
+    border-right: 1px solid $orange;
+    transform: rotate(45deg);
+
+    @include mq("md") {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+.btn-link::after {
+    background: $orange;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+    z-index: -1;
+}
+
+.btn-link:hover {
+    color: $white;
+}
+
+.btn-link:hover:after {
+    transform: scale(1, 1);
+}
+
+.btn-link:hover:before {
+    border-top: 1px solid $white;
+    border-right: 1px solid $white;
+}
+
+.btn-link__access {
+    position: relative;
+    display: inline-block;
+    color: $orange;
+    font-size: rem(17);
+    line-height: 1;
+    text-align: center;
+    max-width: rem(170);
+    width: 100%;
+    background-color: $white;
+    padding: rem(8) 0 rem(8);
+    border: 1px solid $orange;
+
+    @include mq("md") {
+        max-width: rem(160);
+        width: 100%;
+        padding: rem(12) 0 rem(13);
+    }
+}
+
+.btn-link__access::before {
+    /* くの字の表示設定 */
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid $orange;
+    border-right: 1px solid $orange;
+    transform: rotate(45deg);
+
+    @include mq("md") {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+.btn-link__access::after {
+    background: $orange;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+    z-index: -1;
+}
+
+.btn-link__access:hover {
+    color: $white;
+}
+
+.btn-link__access:hover:after {
+    transform: scale(1, 1);
+}
+
+.btn-link__access:hover:before {
+    border-top: 1px solid $white;
+    border-right: 1px solid $white;
+}
+
+.btn-link__blog {
+    position: relative;
+    display: inline-block;
+    color: $orange;
+    font-size: rem(18);
+    line-height: 1;
+    text-align: center;
+    width: 100%;
+    background-color: $white;
+    padding: rem(15) 0;
+    border: 1px solid $orange;
+
+    @include mq("md") {
+        padding: rem(20) 0;
+    }
+}
+
+.btn-link__blog::before {
+    /* くの字の表示設定 */
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid $orange;
+    border-right: 1px solid $orange;
+    transform: rotate(45deg);
+
+    @include mq("md") {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+.btn-link__blog::after {
+    background: $orange;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+    z-index: -1;
+}
+
+.btn-link__blog:hover {
+    color: $white;
+}
+
+.btn-link__blog:hover:after {
+    transform: scale(1, 1);
+}
+
+.btn-link__blog:hover:before {
+    border-top: 1px solid $white;
+    border-right: 1px solid $white;
+}

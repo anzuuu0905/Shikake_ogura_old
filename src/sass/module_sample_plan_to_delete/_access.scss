@@ -1,0 +1,182 @@
+@use "global"as *;
+
+.access__head {
+
+    @include mq("md") {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.access__btn {
+    max-width: rem(160);
+    width: 100%;
+    margin-top: rem(10);
+    margin-left: auto;
+    margin-right: rem(8);
+}
+
+.access__text {
+    margin: rem(13) rem(10) 0 rem(10);
+    padding-bottom: rem(4);
+    border-bottom: 1.5px solid #e6e6e6;
+
+    @include mq("md") {
+        padding-bottom: rem(14);
+        margin: rem(14) 0 0 rem(22);
+    }
+}
+
+.access__description {
+    color: $black;
+    font-size: rem(13);
+    line-height: 1.6;
+    font-weight: $normal;
+
+    @include mq("md") {
+        display: inline;
+        font-size: rem(17);
+    }
+}
+
+.access__root {
+    display: inline-block;
+    color: $black;
+    font-size: rem(13);
+    line-height: 1.4;
+    font-weight: $bold;
+
+    @include mq("md") {
+        display: inline;
+        font-size: rem(17);
+        line-height: 2;
+    }
+}
+
+.access__info {
+    margin-top: rem(20);
+
+    @include mq("md") {
+        display: flex;
+        align-items: center;
+        margin-top: rem(45);
+    }
+}
+
+.access__adress {
+    color: $black;
+    font-size: rem(13);
+    line-height: 1.5;
+    font-weight: $bold;
+
+    @include mq("md") {
+        font-size: rem(17);
+    }
+}
+
+.access__adress::before {
+    content: "";
+    background: url(../images/common/access-icon.png) no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: rem(15);
+    height: rem(20);
+    vertical-align: middle;
+    margin-right: rem(3);
+}
+
+.access__tel {
+    color: $black;
+    font-size: rem(13);
+    line-height: 1.5;
+    font-weight: $bold;
+    padding-top: rem(10);
+    width: rem(160);
+
+    @include mq("md") {
+        font-size: rem(17);
+        padding-top: 0;
+        margin-left: rem(50);
+    }
+}
+
+.access__tel::before {
+    content: "";
+    background: url(../images/common/tel-icon.png) no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: rem(15);
+    height: rem(20);
+    vertical-align: middle;
+    margin-right: rem(3);
+}
+
+.access__link {
+    position: relative;
+    color: #0060bf;
+    font-size: rem(12);
+    line-height: 1;
+    text-decoration: underline;
+    margin-right: rem(13);
+    width: rem(96);
+
+    @include mq("md") {
+        font-size: rem(16);
+        margin-left: rem(50);
+        margin-right: 0;
+    }
+}
+
+.access__link::before {
+    /* くの字の表示設定 */
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -20px;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid $black;
+    border-right: 1px solid $black;
+    transform: rotate(45deg);
+
+    @include mq("md") {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+.access__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.access__maparea {
+    // height: 0;
+    overflow: hidden;
+    position: relative;
+    padding-top: rem(450);
+    // padding-top: 79%;
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+    margin-top: rem(24);
+
+    @include mq("md") {
+        position: relative;
+        // padding-top: 46.5%;
+        margin: rem(27) 0 0 rem(-230);
+    }
+}
+
+.access__map {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+}

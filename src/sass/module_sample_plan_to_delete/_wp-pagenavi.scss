@@ -1,0 +1,114 @@
+@use "global"as *;
+
+.wp-pagenavi {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+    color: #cccccc;
+    font-size: rem(24);
+    background-color: #FFF;
+    border: none;
+    padding: rem(8) rem(13);
+    margin: 0 rem(4);
+    white-space: nowrap;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+    @include mq("md"){
+        padding: rem(8) rem(13);
+    }
+}
+
+.wp-pagenavi a:hover {
+    color: #FFF;
+    background-color: #A09D71;
+    border-color: #999;
+}
+
+.wp-pagenavi span.current {
+    color: #FFF;
+    background-color: #ff7f00;
+    font-weight: bold;
+}
+
+
+.wp-pagenavi {
+    //     font-size: 0;
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     justify-content: center;
+    text-align: center;
+    margin-top: rem(40);
+
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}
+
+.wp-pagenavi .previouspostslink {
+    background: url(../images/common/page-arrow1.png) center center/11px auto no-repeat;
+    padding: rem(8);
+}
+
+.wp-pagenavi .nextpostslink {
+    background: url(../images/common/page-arrow2.png) center center/11px auto no-repeat;
+}
+
+// .pagelink {
+//     width: rem(40);
+//     height: rem(40);
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     color: #ccc;
+//     font-size: rem(24);
+//     font-weight: $normal;
+//     text-decoration: none;
+//     padding: rem(1) rem(5);
+//     margin: rem(10) rem(5) 0;
+//     background-color: #fff;
+// }
+
+// .current.pagelink {
+//     color: #fff;
+//     background-color: #ff7f00;
+//     border: none;
+// }
+
+// .page-next.pagelink {
+//     position: relative;
+//     // color: #666;
+//     background-color: transparent;
+// }
+
+// .page-next.pagelink::before {
+//     content: "";
+//     margin: auto;
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     width: rem(16);
+//     height: rem(16);
+//     border-top: 2px solid #666;
+//     border-right: 2px solid #666;
+//     transform: rotate(45deg);
+// }
+
+.wp-pagenavi .pages{
+    display: none;
+}
+
+.wp-pagenavi .last{
+    display: none;
+}
+
+.wp-pagenavi .first{
+    display: none;
+}

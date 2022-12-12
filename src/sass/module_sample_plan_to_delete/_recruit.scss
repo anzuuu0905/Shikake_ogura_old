@@ -1,0 +1,67 @@
+@use "global"as *;
+
+.recruit__title {
+    position: relative;
+    color: $black;
+    font-size: rem(20);
+    background-color: #f7f7f7;
+    padding: rem(12) rem(25) rem(12);
+    margin-bottom: rem(30);
+
+    @include mq("md") {
+        font-size: rem(24);
+        padding: rem(16) rem(25) rem(17);
+    }
+}
+
+.recruit__title::before {
+    content: "";
+    display: block;
+    width: rem(7);
+    height: 100%;
+    background-color: #ff7f00;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.recruit__description {
+    color: $black;
+    font-size: rem(17);
+    font-weight: $normal;
+    padding-bottom: rem(50);
+}
+
+
+.recruit__contact {
+    text-align: center;
+    margin-top: rem(50);
+}
+
+.recruit__botton {
+    position: relative;
+    display: inline-block;
+    color: $white;
+    font-size: rem(18);
+    background-color: $orange;
+    padding: rem(18) rem(104) rem(18) rem(104);
+    text-align: center;
+
+}
+
+.recruit__botton::before {
+    /* くの字の表示設定 */
+    content: "";
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: rem(16);
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid $white;
+    border-right: 1px solid $white;
+    transform: rotate(45deg);
+}

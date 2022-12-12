@@ -1,0 +1,38 @@
+@use "global"as *;
+
+.breadcrumb__inner {
+    margin-bottom: rem(25);
+
+    @include mq("md") {
+        margin-bottom: rem(40);
+    }
+}
+
+.breadcrumb__items {
+    list-style: none;
+    font-weight: $normal;
+
+
+}
+
+.breadcrumb__item {
+    display: inline;
+    color: $black;
+    font-size: rem(10);
+
+    @include mq("md") {
+        font-size: rem(16);
+    }
+}
+
+.breadcrumb__item--current {
+    color: #ff7f00;
+}
+
+.breadcrumb__item:not(:last-of-type)::after {
+    content: ">";
+    margin: 0 .6em;
+    /* 記号の左右の余白 */
+    color: $black;
+    /* 記号の色 */
+}

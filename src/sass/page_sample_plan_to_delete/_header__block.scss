@@ -1,0 +1,11 @@
+@use "global"as *;
+
+.header__block {
+    background-color: #fff;
+
+    @include mq("md") {
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+    }
+}

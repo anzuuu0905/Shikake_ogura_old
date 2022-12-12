@@ -1,0 +1,9 @@
+@use "global"as *;
+
+.event__block {
+    margin-bottom: rem(50);
+
+    @include mq("md") {
+        margin-bottom: rem(84);
+    }
+}

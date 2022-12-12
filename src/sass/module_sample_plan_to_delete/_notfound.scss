@@ -1,0 +1,132 @@
+@use "global"as *;
+
+.notfound__inner.inner {
+    max-width: rem(600);
+    width: 100%;
+    margin-top: rem(90);
+    margin-bottom: rem(90);
+
+    @include mq("md") {
+        max-width: rem(890);
+        width: 100%;
+    }
+}
+
+.notfound-head__text {
+    color: #ddd;
+    text-align: center;
+}
+
+.notfound-head__title {
+    font-size: rem(100);
+    line-height: 1;
+    letter-spacing: 0.03em;
+
+    @include mq("md") {
+        font-size: rem(150);
+    }
+}
+
+.notfound-head__subtitle {
+    display: inline-block;
+    font-size: rem(16);
+    line-height: 1;
+
+    @include mq("md") {
+        font-size: rem(24);
+        margin-top: rem(17);
+    }
+}
+
+.notfound__body {
+    color: $black;
+    margin-top: rem(60);
+    text-align: center;
+
+    @include mq("md") {
+        margin-top: rem(90);
+    }
+}
+
+.notfound__title {
+    font-size: rem(26);
+
+    @include mq("md") {
+        font-size: rem(30);
+    }
+}
+
+.notfound__text {
+    font-size: rem(16);
+    font-weight: $normal;
+    margin-top: rem(10);
+}
+
+.notfound__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(20);
+    flex-wrap: wrap;
+    margin-top: rem(50);
+}
+
+.notfound__link {
+    text-align: center;
+}
+
+.notfound__btn {
+    position: relative;
+    display: inline-block;
+    color: $white;
+    font-size: rem(18);
+    background-color: $orange;
+    padding: rem(18) 0;
+    text-align: center;
+    width: rem(250);
+}
+
+.notfound__btn::before {
+    /* くの字の表示設定 */
+    content: "";
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: rem(10);
+    width: rem(10);
+    height: rem(10);
+    border-top: 1px solid $white;
+    border-right: 1px solid $white;
+    transform: rotate(45deg);
+}
+
+.notfound__btn::after {
+    background: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 1px solid $orange;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+    z-index: -1;
+}
+
+.notfound__btn:hover {
+    color: $orange;
+}
+
+.notfound__btn:hover::after {
+    transform: scale(1, 1);
+}
+
+.notfound__btn:hover::before {
+    /* くの字の表示設定 */
+    border-top: 1px solid $orange;
+    border-right: 1px solid $orange;
+}

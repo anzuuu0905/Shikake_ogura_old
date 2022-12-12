@@ -1,0 +1,252 @@
+@use "global"as *;
+
+.facility__inner.inner {
+    max-width: rem(940);
+    width: 100%;
+}
+
+.facility__textbox {
+    margin-bottom: rem(18);
+
+    @include mq("md") {
+        margin-bottom: rem(72);
+    }
+}
+
+.facility__description {
+    color: #4d4d4d;
+    font-size: rem(15);
+    font-weight: $normal;
+    line-height: 2;
+    letter-spacing: -0.05em;
+    text-align: center;
+
+    @include mq("md") {
+        font-size: rem(20);
+        letter-spacing: normal;
+    }
+}
+
+.facility__items {
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+    margin-top: rem(12);
+
+    @include mq("sm") {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(16);
+        width: calc(100% + rem(64));
+        margin: 0 rem(-40) 0 rem(-40);
+    }
+}
+
+.facility__item {
+    width: 100%;
+
+    @include mq("md") {}
+}
+
+.facility__item+.facility__item {
+    margin-top: rem(8);
+
+    @include mq("md") {
+        margin-top: 0;
+    }
+}
+
+.facility__img1 {
+    background-image: url(../images/top/facilityinfo-img1_sp.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: rem(185);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq("md") {
+        max-width: rem(477);
+        width: 100%;
+        height: rem(240);
+    }
+}
+
+.facility__img2 {
+    background-image: url(../images/top/facilityinfo-img2_sp.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: rem(185);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq("md") {
+        background-image: url(../images/top/facilityinfo-img2.jpg);
+        max-width: rem(477);
+        width: 100%;
+        height: rem(240);
+    }
+}
+
+.facility__img3 {
+    background-image: url(../images/top/facilityinfo-img3_sp.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: rem(185);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq("md") {
+        background-image: url(../images/top/facilityinfo-img3.jpg);
+        max-width: rem(477);
+        width: 100%;
+        height: rem(240);
+    }
+}
+
+.facility__img4 {
+    position: relative;
+    background-image: url(../images/top/facilityinfo-img4.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: rem(185);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq("md") {
+        max-width: rem(477);
+        width: 100%;
+        height: rem(240);
+    }
+}
+
+.facility__img4.facility__img--closed::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: rem(189);
+    background-color: #000000;
+    /*背景色*/
+    opacity: 0.6;
+    /*透明度*/
+
+    @include mq("md") {
+        max-width: rem(477);
+        width: 100%;
+        height: rem(240);
+    }
+}
+
+.facility__text {
+    z-index: 10;
+}
+
+.facility__text.facility__text--ajisai::before {
+    content: 'あじさい';
+    display: block;
+    color: $white;
+    font-size: rem(12);
+    text-align: right;
+    text-shadow: 1px 1px 1px $black;
+
+    @include mq("md") {
+        font-size: rem(17);
+    }
+}
+
+.facility__title {
+    color: $white;
+    font-size: rem(24);
+    line-height: 1;
+    text-align: center;
+    margin-bottom: rem(20);
+    text-shadow: 1px 1px 1px $black;
+
+    @include mq("md") {
+        font-size: rem(28);
+    }
+
+    @include mq("lg") {
+        font-size: rem(33);
+    }
+}
+
+.facility__link {
+    text-align: center;
+}
+
+.facility__btn {
+    position: relative;
+    display: inline-block;
+    color: $white;
+    font-size: rem(14);
+    line-height: 1;
+    padding: rem(3) rem(23);
+    border: 1px solid $white;
+    background-color: rgba($color: #000000, $alpha: 0.1);
+
+    @include mq("md") {
+        font-size: rem(18);
+        padding: rem(5) rem(23);
+    }
+}
+
+.facility__btn::before {
+    /* くの字の表示設定 */
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid $white;
+    border-right: 1px solid $white;
+    transform: rotate(45deg);
+
+    @include mq("md") {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+
+
+.facility__btn::after {
+    background-color: #FFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+    z-index: -1;
+}
+
+.facility__btn:hover {
+    color: $orange;
+    opacity: 1;
+    background-color: rgba($color: #000000, $alpha: 0);
+}
+
+.facility__btn:hover:after {
+    transform: scale(1, 1);
+}
+
+.facility__btn:hover::before {
+    border-top: 1px solid $orange;
+    border-right: 1px solid $orange;
+}

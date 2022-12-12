@@ -1,0 +1,95 @@
+@use "global"as *;
+
+.sitemap__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(40);
+
+    @include mq("md") {
+        gap: rem(60) rem(20);
+    }
+}
+
+.sitemap__item {
+    color: $black;
+    max-width: rem(430);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sitemap__item a {
+    color: $black;
+}
+
+.sitemap__img {
+    max-width: rem(430);
+    width: 100%;
+    margin-bottom: rem(12);
+}
+
+.sitemap__img img {
+    aspect-ratio: 430 / 154;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sitemap__title {
+    position: relative;
+    font-size: rem(18);
+    padding-left: rem(24);
+
+    @include mq("md") {
+        font-size: rem(24);
+    }
+}
+
+.sitemap__title::before {
+    /* くの字の表示設定 */
+    content: "";
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-top: 1px solid $black;
+    border-right: 1px solid $black;
+    transform: rotate(45deg);
+}
+
+.sitemap__item a:hover {
+    color: $orange;
+    opacity: 1;
+}
+
+.sitemap__link {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-size: rem(16);
+    font-weight: $normal;
+    line-height: 2;
+    padding-left: rem(20);
+
+    @include mq("md") {
+        font-size: rem(18);
+    }
+}
+
+.sitemap__link::before {
+    /* くの字の表示設定 */
+    content: "";
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid $black;
+    border-right: 1px solid $black;
+    transform: rotate(45deg);
+}

@@ -1,0 +1,9 @@
+@use "global"as *;
+
+.sitemap_block {
+    margin-bottom: rem(50);
+
+    @include mq("md") {
+        margin-bottom: rem(90);
+    }
+}

@@ -1,0 +1,146 @@
+@use "global"as *;
+
+.shop-head__wrap {
+    background-image: url(../images/subpage/shop-title.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: rem(125);
+    // margin-top: rem(45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: rem(10);
+
+    @include mq("md") {
+        width: 100%;
+        height: rem(250);
+        margin-top: 0;
+        margin-bottom: rem(18);
+    }
+}
+
+.shop-head__text {
+    color: $white;
+    text-align: center;
+}
+
+.shop__title {
+    font-size: rem(22);
+    line-height: 1;
+
+    @include mq("md") {
+        font-size: rem(40);
+    }
+}
+
+.shop__subtitle {
+    display: inline-block;
+    font-size: rem(11);
+    line-height: 1;
+
+    @include mq("md") {
+        font-size: rem(18);
+        margin-top: rem(17);
+    }
+}
+
+.shop__text {
+    text-align: center;
+    margin-bottom: rem(50);
+
+    @include mq("md") {
+        margin-bottom: rem(72);
+    }
+}
+
+.shop__description {
+    color: $black;
+    font-size: rem(14);
+    font-weight: $normal;
+    line-height: 2;
+    text-align: center;
+
+    @include mq("md") {
+        font-size: rem(20);
+        line-height: 2.15;
+    }
+}
+
+
+.shop-body__title {
+    position: relative;
+    color: $black;
+    font-size: rem(20);
+    background-color: #f7f7f7;
+    padding: rem(12) rem(25) rem(12);
+    margin-bottom: rem(30);
+
+    @include mq("md") {
+        font-size: rem(24);
+        padding: rem(16) rem(25) rem(17);
+    }
+}
+
+.shop-body__title::before {
+    content: "";
+    display: block;
+    width: rem(7);
+    height: 100%;
+    background-color: #ff7f00;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.shop-time__wrap {
+    margin-top: rem(80);
+    margin-bottom: rem(80);
+}
+
+.shop-time__text {
+    color: $black;
+    font-size: rem(24);
+    line-height: 1;
+    margin-bottom: rem(30);
+}
+
+.shop-time__link {
+    position: relative;
+    display: inline-block;
+    color: #0060bf;
+    font-size: rem(18);
+    font-weight: $normal;
+    line-height: 1;
+    padding: rem(2);
+    text-decoration: underline;
+    // border-bottom: 1px solid #0060bf;
+    margin-left: rem(24);
+}
+
+.shop-time__link:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
+.shop-time__link::before {
+    /* くの字の表示設定 */
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -20px;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid $black;
+    border-right: 1px solid $black;
+    transform: rotate(135deg);
+
+    @include mq("md") {
+        width: 10px;
+        height: 10px;
+    }
+}

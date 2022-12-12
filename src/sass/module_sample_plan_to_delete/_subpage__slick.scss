@@ -1,0 +1,23 @@
+@use "global"as *;
+
+.subpage__slick {
+    max-width: rem(870);
+    width: 100%;
+    // height: rem(580);
+}
+
+.subpage-slick__item img {
+    aspect-ratio: 870/ 580;
+    width: 100%;
+    object-fit: cover;
+}
+
+.subpage-slick__text {
+    color: $black;
+    font-size: rem(17);
+    font-weight: $normal;
+    line-height: 1;
+    text-align: center;
+    margin: rem(20) 0;
+    transform: translate3d(0,0,0);
+}

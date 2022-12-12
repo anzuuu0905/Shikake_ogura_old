@@ -1,0 +1,139 @@
+@use "global"as *;
+
+.navi-large__items {
+    width: 100%;
+    background-color: $orange;
+    color: $white;
+
+
+    @include mq("md") {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: rem(20);
+        padding: rem(20) rem(10);
+    }
+}
+
+.navi-large__item {
+    position: relative;
+    font-size: rem(17);
+    font-weight: $bold;
+    line-height: 1;
+    border-bottom: 1px solid rgba($color: #FFF, $alpha: 0.6);
+
+
+    @include mq("md") {
+        font-size: rem(20);
+        border-bottom: none;
+    }
+}
+
+.navi-large__item a {
+    padding: rem(12) rem(14) rem(13);
+    display: block;
+
+    @include mq("md") {
+        padding: 0;
+    }
+}
+
+
+.navi-large__item:last-child {
+    border-bottom: none;
+}
+
+.navi-large__item::before {
+    /* くの字の表示設定 */
+    content: "";
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: rem(26);
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid $white;
+    border-right: 1px solid $white;
+    transform: rotate(45deg);
+
+    @include mq("md") {
+        display: none;
+    }
+}
+
+.navi-large__item.navi-large__item--closed {
+    padding: rem(12) rem(14) rem(13);
+    display: block;
+    opacity: 0.7;
+
+    @include mq("md") {
+        padding: 0;
+    }
+}
+
+.navi-large__item.navi-large__item--closed::before {
+    display: none;
+}
+
+.navi-small__items {
+
+    width: 100%;
+    background-color: $blue;
+    color: $white;
+
+    @include mq("md") {
+        display: flex;
+        justify-content: center;
+        // gap: rem(20);
+        padding: 0 rem(10);
+    }
+}
+
+.navi-small__item {
+    position: relative;
+    font-size: rem(14);
+    font-weight: $bold;
+    line-height: 1;
+    border-bottom: 1px solid rgba($color: #FFF, $alpha: 0.6);
+
+
+    @include mq("md") {
+        font-size: rem(15);
+        border-bottom: none;
+    }
+}
+
+.navi-small__item a {
+    display: block;
+    padding: rem(14);
+
+    @include mq("md") {
+        padding: rem(12);
+    }
+}
+
+.navi-small__item:last-child {
+    border-bottom: none;
+}
+
+.navi-small__item::before {
+    /* くの字の表示設定 */
+    content: "";
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: rem(26);
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid $white;
+    border-right: 1px solid $white;
+    transform: rotate(45deg);
+
+    @include mq("md") {
+        display: none;
+    }
+}

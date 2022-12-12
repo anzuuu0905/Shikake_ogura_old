@@ -1,0 +1,49 @@
+@use "global"as *;
+
+.privacy__content {
+    margin-bottom: rem(50);
+
+    @include mq("md") {
+        margin-bottom: rem(90);
+    }
+}
+
+.privacy__title {
+    position: relative;
+    color: $black;
+    font-size: rem(20);
+    background-color: #f7f7f7;
+    padding: rem(12) rem(25) rem(12);
+    margin-bottom: rem(20);
+
+    @include mq("md") {
+        font-size: rem(24);
+        padding: rem(16) rem(25) rem(17);
+        margin-bottom: rem(30);
+    }
+
+}
+
+.privacy__title::before {
+    content: "";
+    display: block;
+    width: rem(7);
+    height: 100%;
+    background-color: #ff7f00;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.privacy__text {
+    color: $black;
+    font-size: rem(16);
+    font-weight: $normal;
+    line-height: 1.8;
+    letter-spacing: -0.02em;
+
+    @include mq("md") {
+        font-size: rem(18);
+    }
+}
